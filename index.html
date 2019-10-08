@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs ================================================== -->
+  <meta charset="utf-8">
+
+  <!-- Mobile Specific Metas ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq)return;
+      n = f.fbq = function () {
+        n.callMethod ?
+           n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+       'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '488709441691930');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=488709441691930&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- Site Title -->
+  <title>TexAfrica 2020- Be More Do More</title>
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!--Vuejs-->
+  <script src="js/vue.min.js"></script>
+
+  <!-- CSS
+        ================================================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Template styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Responsive fvstyles-->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Animation -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="css/colorbox.css">
+  <!-- Custom -->
+  <link rel="stylesheet" href="css/custom.css">
+
+  <style>
+    @media (min-width: 768px) {
+      .pb-lg-3 {
+        padding-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div id="app">
+  <div class="body-inner">
+    <!-- Header start -->
+    <header id="header" class="header header-transparent">
+      <div class="container">
+        <div class="row">
+          <div class="navbar-header">
+            <div class="logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="">
+              </a>
+            </div>
+            <!-- logo end -->
+          </div>
+          <!-- Navbar header end -->
+          <div class="site-nav-inner">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <!-- Blog li end -->
+                <li><a href="gallery.html">Texa 2019</a></li>
+                <li class="header-ticket">
+                  <a class="ticket-btn btn-primary pointer" @click="toggleOverlay('open')"><i
+                          class="fa fa-ticket"></i>REGISTER</a>
+                </li>
+              </ul>
+              <!--/ Nav ul end -->
+            </nav>
+            <!--/ Collapse end -->
+          </div>
+          <!--/ Site nav inner end -->
+        </div>
+        <!--/ Row end -->
+      </div>
+      <!--/ Container end -->
+    </header>
+    <!--/ Header end -->
+
+    <section id="banner">
+      <div class="banner-item bg-overlay" style="background-image:url(images/hero-area/bg-main.jpg)">
+        <div class="container">
+          <div class="banner-content text-center">
+            <div class="banner-content-wrap">
+              <div class="countdown bg-style" id="countdown" style="visibility: hidden">
+                <div class="counter-day">
+                  <span class="days">{{ days }}</span>
+                  <div class="smalltext">{{ days > 1 ? 'Days' : 'Day' }}</div>
+                  <!--<button @click="test()">j</button>-->
+                </div>
+                <div class="counter-hour">
+                  <span class="hours">{{ hours }}</span>
+                  <div class="smalltext">{{ hours > 1 ? 'Hours' : 'Hour' }}</div>
+                </div>
+                <div class="counter-minute">
+                  <span class="minutes">{{ minutes }}</span>
+                  <div class="smalltext">{{ minutes > 1 ? 'Minutes' : 'Minute' }}</div>
+                </div>
+                <div class="counter-second">
+                  <span class="seconds">{{ seconds }}</span>
+                  <div class="smalltext">{{ seconds > 1 ? 'Seconds' : 'Second' }}</div>
+                </div>
+              </div>
+              <!-- Countdown end -->
+              <h1 class="banner-title">THE EVENT XPERIENCE AFRICA </h1>
+              <h2 class="banner-subtitle">JANUARY, 28<sup>th</sup> - 30<sup>th</sup>, 2020</h2>
+              <h3 class="banner-desc">Lagos, Nigeria</h3>
+              <p class="banner-btn">
+                <a @click="toggleOverlay('open')" href="#" class="btn btn-primary">Register Now</a>
+              </p>
+            </div>
+            <!-- Banner content wrap end -->
+          </div>
+          <!-- Banner content end -->
+        </div>
+        <!-- Container end -->
+      </div>
+      <!-- Banner item end -->
+    </section>
+    <!-- Section banner end -->
+
+    <section id="ts-intro" class="ts-intro no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="gap-60"></div>
+            <!--h2 class="intro-title">About the Event</h2-->
+            <h3 class="intro-sub-title">Why the Event Xperience Africa?
+            </h3>
+            <p class="intro-desc"> THE EVENT XPERIENCE AFRICA (TEXA) is an annual conference geared towards
+              equipping an ever growing audience of event entrepreneurs with the right tools needed to thrive in
+              the industry. The conference is targeted at seasoned event professionals and beginners alike
+              empowering them to be more and do more at the same time.
+            </p>
+            <blockquote>The Event Xperience Africa (TEXA) is all about learning, unlearning and relearning.
+            </blockquote>
+            <p>The conference brings together event professionals from various parts of Africa for three days of
+              learning, networking, sharing and getting in touch with the latest innovations and trends in the
+              event industry.</p>
+            <p>The conference provides a platform for attendees to learn from industry experts from around the
+              globe and also form new and lasting relationships with other event professionals.</p>
+            <p><a @click="toggleOverlay('open')" href="#" class="btn btn-primary">Register Now</a></p>
+          </div>
+          <!-- Col end -->
+          <div class="col-xs-12 col-sm-12 col-md-6 padding-top-lg">
+            <div class="intro-video">
+              <img class="img-responsive" src="images/intro-video.png" alt=""/>
+              <a class="popup" href="https://www.youtube.com/embed/UnrAUDD0JGg?autoplay=1%26loop=1">
+                <div class="video-icon">
+                  <i class="fa fa-play"></i>
+                </div>
+              </a>
+            </div>
+            <!-- Intro video end -->
+          </div>
+          <!-- Col end -->
+        </div>
+        <!-- Content row 1 end -->
+        <div class="gap-30"></div>
+        <div class="row facts-wrapper">
+          <div class="col-sm-3 col-xs-6">
+            <div class="ts-facts">
+                     <span class="ts-facts-img">
+                        <img src="images/icons/fact-workshop.png" alt=""/>
+                     </span>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp">600</span></h2>
+                <h3 class="ts-facts-title">Attendees</h3>
+              </div>
+            </div>
+            <!--Facts end -->
+          </div>
+          <!-- Col 1 end -->
+          <div class="col-sm-3 col-xs-6">
+            <div class="ts-facts">
+                     <span class="ts-facts-img">
+                        <img src="images/icons/fact-speaker.png" alt=""/>
+                     </span>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp">100</span></h2>
+                <h3 class="ts-facts-title">Speakers</h3>
+              </div>
+            </div>
+            <!--Facts end -->
+          </div>
+          <!-- Col 2 end -->
+          <div class="col-sm-3 col-xs-6">
+            <div class="ts-facts">
+                     <span class="ts-facts-img">
+                        <img src="images/icons/fact-sponsor.png" alt=""/>
+                     </span>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp">110</span></h2>
+                <h3 class="ts-facts-title">Sponsors</h3>
+              </div>
+            </div>
+            <!--Facts end -->
+          </div>
+          <!-- Col 3 end -->
+          <div class="col-sm-3 col-xs-6">
+            <div class="ts-facts last">
+                     <span class="ts-facts-img">
+                        <img src="images/icons/fact-country.png" alt=""/>
+                     </span>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp">10</span></h2>
+                <h3 class="ts-facts-title">Countries</h3>
+              </div>
+            </div>
+            <!--Facts end -->
+          </div>
+          <!-- Col 4 end -->
+        </div>
+        <!-- Content Row 2 end -->
+      </div>
+      <!-- Container end -->
+    </section>
+    <!-- Intro area end -->
+
+    <!-- Speakers end -->
+    <!--/ Title row end -->
+  </div>
+  <!-- Schedule end -->
+  <section id="ts-pricing" class="ts-pricing">
+    <div class="container">
+      <!--div class="row"-->
+      <div class="col-md-12">
+        <div class="ts-pricing-box pricing-featured">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="10000">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+              <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+              <li data-target="#carouselExampleSlidesOnly" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <!--<img class="d-block w-100" src="images/600X400.png" alt="First slide">-->
+                <div class="carousel-caption  d-md-block">
+                  <!--<p>We are definitely excited about 2019 what a wonderful way to start the year with the TEXA
+                    Conference.
+
+                    It was a lot of learning, unlearning and relearning. We are looking beyond all limitations. Doing
+                    more and being more. Thank you to the Event Experience Africa & Zapphaire events team for an
+                    incredible conference.</p>-->
+                  <p>We are definitely excited about 2019 what a wonderful way to start the year with the TEXA
+                    Conference.
+
+                    It was a lot of learning, unlearning and relearning. Doing
+                    more and being more. Thank you to the Zapphaire events team for an
+                    incredible conference.</p>
+                  <h5 style="color: white"><i>~ Ayomikun Falade, CEO Lala’s Manangement</i></h5>
+                </div>
+              </div>
+              <div class="item">
+                <!--<img class="d-block w-100" src="images/600X400.png" alt="Second slide">-->
+                <div class="carousel-caption  d-md-block">
+                  <!--<p>Woooooooooosh!!! Day 2 of The Event Xperience Africa put together by Zapphaire Events’ Funke
+                    Bucknor was power packed and an eye opener from learning about the business of events with
+                    Triciabiz, Charles Otudor, Steve Babaeko and many more panelists, to the keynote speech by Ibukun
+                    Awosika who spoke about the capacity to do more, the courage to dare new things, character,
+                    integrity, checking your circle of encouragers. it was well worth it and I took so much away to
+                    implement in my business.</p>-->
+                  <p>Woooooooooosh!!! Day 2 of The Event Xperience Africa was power packed and an eye opener from
+                    learning about the business of events to learning about the capacity to do more, the courage to dare
+                    new things, character,
+                    integrity, checking your circle of encouragers. it was well worth it and I took so much away to
+                    implement in my business.</p>
+                  <h5 style="color: white"><i>~ Gbemisola Omobolaji, CEO Cornucopia Events</i></h5>
+                </div>
+              </div>
+              <div class="item">
+                <!--<img class="d-block w-100" src="images/600X400.png" alt="Third slide">-->
+                <div class="carousel-caption  d-md-block">
+                  <p>The Event Xperience Africa Conference… I learnt so much from the curative classes and the
+                    interactive sessions.</p>
+                  <h5 style="color: white"><i>~ Hauwa Hassan Hadeija, CEO Wishes Events</i></h5>
+                </div>
+              </div>
+              <div class="item">
+                <!--<img class="d-block w-100" src="images/600X400.png" alt="Third slide">-->
+                <div class="carousel-caption  d-md-block">
+                  <p>I had an awesome time yesterday at Texa2019. Thanks to Funke Bucknor and her team for putting up
+                    such a wonderful event.</p>
+                  <h5 style="color: white"><i>~ Tosan Jemide, CEO Cakes by Tosan</i></h5>
+                </div>
+              </div>
+            </div>
+            <!--<a class="left carousel-control" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>-->
+          </div>
+        </div><!-- Plan 2 end -->
+      </div><!-- Col end -->
+    </div>
+    <!--/ Content row end -->
+  </section><!-- Pricing end -->
+
+  <section id="ts-newsletter" class="ts-newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="newsletter-form clearfix">
+          <div class="col-md-4 col-xs-12">
+            <h2>Be the first to hear about our updates</h2>
+            <h3>Subscribe Newsletter</h3>
+          </div>
+          <!-- Col end -->
+          <div class="col-md-8 col-xs-12">
+            <form action="https://texafrica.us19.list-manage.com/subscribe/post?u=5d960db14addfebbbdfba83a0&amp;id=481631f86e"
+                  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                  target="_blank" novalidate>
+              <div class="form-group">
+                <input type="email" name="EMAIL" id="mce-EMAIL" class="form-control form-control-lg"
+                       placeholder="Your Email Here" autocomplete="off" required>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_5d960db14addfebbbdfba83a0_481631f86e" tabindex="-1" value="">
+                </div>
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <!--<div id="mc_embed_signup">
+            <form action="https://texafrica.us19.list-manage.com/subscribe/post?u=5d960db14addfebbbdfba83a0&amp;id=481631f86e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <label for="mce-EMAIL">Subscribe</label>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                &lt;!&ndash; real people should not fill this in and expect good things - do not remove this or risk form bot signups&ndash;&gt;
+
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </div>
+            </form>
+          </div>-->
+          <!-- Col end -->
+        </div>
+        <!-- Newsletter form end -->
+      </div>
+      <!-- Row end -->
+    </div>
+    <!--/ Container end -->
+  </section>
+  <!--/ Newsletter end -->
+
+  <section id="ts-sponsors" class="ts-sponsors">
+    <div class="container">
+      <div class="row text-center">
+        <!--h2 class="section-title">Supporting Our Project</h2-->
+        <p class="section-sub-title">Event Sponsors</p>
+      </div>
+      <!--/ Title row end -->
+      <div class="row sponsor-padding text-center">
+        <h3 class="sponsor-title">Platinum Sponsors</h3>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <a href="#" class="sponsor-logo">
+            <img class="img-responsive" src="images/sponsors/sponsor1.png" alt=""/>
+          </a>
+        </div>
+        <!-- Col 1 end -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <a href="#" class="sponsor-logo">
+            <img class="img-responsive" src="images/sponsors/sponsor2.png" alt=""/>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <a href="#" class="sponsor-logo">
+            <img class="img-responsive" src="images/sponsors/sponsor3.png" alt=""/>
+          </a>
+        </div>
+        <div class="row">
+          <div class="general-btn text-center">
+            <a class="btn btn-primary"
+               href="/images/theeventexperienceafrica-SponsorshipProposal_NEW-compressed.pdf" download>Become a
+              Sponsor</a>
+          </div>
+        </div>
+        <!--/ Content row 3 end -->
+      </div>
+      <!--/ Container end -->
+    </div>
+  </section>
+  <!-- Sponsors end -->
+  <!--<section id="ts-venue" class="ts-venue">
+     <div class="container">
+        <div class="row text-center">
+           <h2 class="section-title">Where to find us</h2>
+           <h3 class="section-sub-title">Venue and Info</h3>
+        </div>
+        &lt;!&ndash;/ Title row end &ndash;&gt;
+        <div class="row">
+           <div class="col-md-6">
+              <h3>Venue Details</h3>
+              <p>This year TexAfrica is happening at the Landmark events centre. One of Lagos's iconic and beautiful
+                 location. You will join over 600 attendees in one of the best Conference venues in Nigeria.</p>
+              <div class="contact-info">
+                 <div class="contact-info-box">
+                    <i class="fa fa-map-marker">&nbsp;</i>
+                    <div class="contact-info-box-content">
+                       <h4>Address: </h4>
+                       <p>Plot 2 & 3 Water Corporation Drive, Victoria Island, Lagos</p>
+                    </div>
+                 </div>
+                 <div class="contact-info-box">
+                    <i class="fa fa-envelope-o">&nbsp;</i>
+                    <div class="contact-info-box-content">
+                       <h4>Email: </h4>
+                       <p>support@texafrica.com</p>
+                    </div>
+                 </div>
+                 <div class="contact-info-box">
+                    <i class="fa fa-phone">&nbsp;</i>
+                    <div class="contact-info-box-content">
+                       <h4>Phone: </h4>
+                       <p>+234(0) 805 219 9654, +234(0) 802 412 7725</p>
+                    </div>
+                 </div>
+              </div>
+              &lt;!&ndash; contact info end &ndash;&gt;
+           </div>
+           &lt;!&ndash; Col end &ndash;&gt;
+           <div class="col-md-6">
+              <img src="images/venue-img.jpeg" alt="">
+           </div>
+           &lt;!&ndash; Col end &ndash;&gt;
+        </div>
+     </div>
+  </section>-->
+  <!-- Venue end -->
+
+  <section class="venu-map no-padding">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="bottom-contact">
+            <h3>Contact Us</h3>
+            <form id="contact-form" class="contact-form-bottom" action="server_files/contact-form-handler.php"
+                  method="POST">
+              <div class="error-container"></div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-name" placeholder="Name" name="name"
+                           type="text" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-email" placeholder="Email" name="email"
+                           type="email" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-subject" placeholder="Subject" name="subject"
+                           required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                        <textarea class="form-control form-control-message" name="message"
+                                  placeholder="Message" rows="8" required>
+                        </textarea>
+              </div>
+              <div class="text-right"><br>
+                <button class="btn btn-primary btn-full" type="button" @click="postContactForm()">
+                  <i class="fa fa-paper-plane-o"></i> Send Message
+                </button>
+              </div>
+            </form>
+            <!-- Contact form end -->
+          </div>
+          <!-- Contact form div end -->
+        </div>
+        <!-- Col end -->
+        <div class="col-md-6">
+          <div>
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.6326921272!2d3.1438696994062787!3d6.548035697306224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1561576218568!5m2!1sen!2sng"
+                    width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+          <!-- Google Map -->
+        </div>
+        <!-- Col end -->
+      </div>
+      <!-- Content row end -->
+    </div>
+    <!-- Container end -->
+  </section>
+  <!-- Map end -->
+
+  <footer id="footer" class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-menu">
+            <ul class="nav unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="gallery.html">TEXA 2019</a></li>
+            </ul>
+          </div>
+          <!-- Footer menu end -->
+          <div class="footer-logo">
+            <img src="images/footer-logo.png" alt="footer logo"/>
+          </div>
+          <div class="footer-social">
+            <ul>
+              <li><a href="https://www.instagram.com/theeventexperienceafrica/"><i
+                      class="fa fa-instagram"></i></a></li>
+              <li><a href="https://twitter.com/texafrica2020/"><i
+                      class="fa fa-twitter"></i></a></li>
+              <li><a href="https://web.facebook.com/theeventexperienceafrica/">
+                <i class="fa fa-facebook"></i></a></li>
+            </ul>
+          </div>
+          <!-- Footer social end -->
+          <div class="copyright-info">
+            <span>Copyright © 2019 TEXA. All Rights Reserved.</span>
+          </div>
+          <!-- Copyright info end -->
+        </div>
+        <!-- Content col end -->
+      </div>
+      <!-- Content row end -->
+    </div>
+    <!-- Container end -->
+    <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+      <button class="btn btn-primary" title="Back to Top">
+        <i class="fa fa-angle-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <div id="overlay" class="overlay animated fadeIn" style="visibility: hidden">
+    <div class="overlay-content">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-6 col-md-offset-3">
+          <h1 class="">&nbsp;
+            <a class="pull-right text-white bigger-text pointer" @click="toggleOverlay('close')">&times;</a>
+          </h1>
+          <a class="text-center" style="cursor: pointer; padding: 20px 0" @click="newUser()">
+            {{ new_user ? "If you've filled this before, please click here" : 'Back' }}
+          </a>
+          <div class="register-form" id="top-form">
+            <h3>Registration Form</h3>
+            <div class="col-md-12 pb-lg-3">
+              <div class="form-group">
+                    <span style="color: white">
+                      To pay in installment/Group Rates, call
+                      <br> <a>0909 042 7731</a> or send an email to
+                      <a href="mailto:bookings@texafrica.com">bookings@texafrica.com</a>
+                    </span>
+              </div>
+              <div class="form-group">
+                <span style="color: #fff">Price is &#8358;90,000 </span> <br>
+                <span style="color: #fff"> &#8358;80,000 Early Bird offer</span><br>
+                <span style="color: #fff"> &#8358;150,000 Early Pal offer</span>
+              </div>
+              <div class="form-group row">
+                <div class="btn-group btn-padding">
+                  <button class="btn choice-buttons"
+                          :class="pal ? 'btn-inactive' : 'btn-active'"
+                          @click="pal = false" type="button">
+                    <i class="fa fa-paper-plane-o"></i>
+                    Early Bird
+                  </button>
+                  <button class="btn choice-buttons"
+                          :class="pal ? 'btn-active' : 'btn-inactive'"
+                          @click="pal = true" type="button">
+                    <i class="fa fa-handshake-o"></i>
+                    Early Pal
+                  </button>
+                </div>
+              </div>
+            </div>
+            <form id="register-form" class="contact-form-bottom" action="server_files/register.php" method="POST">
+              <div class="animated form-group col-md-12">
+                <h5 style="color: #ff0000; background-color: #ffffff" id="register-error-container"></h5>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-name" placeholder="First Name" v-if="new_user"
+                           v-model="registerForm.first_name" name="first_name"
+                           type="text" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-name" placeholder="Last Name" v-if="new_user"
+                           v-model="registerForm.last_name" name="last_name"
+                           type="text" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-name" placeholder="Phone Number" v-if="new_user"
+                           v-model="registerForm.phone_number" name="phone_number"
+                           type="tel" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-email" id="v-email__" placeholder="Email Address"
+                           v-model="registerForm.email" name="email"
+                           type="email" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-name" placeholder="Company Name" v-if="new_user"
+                           v-model="registerForm.company_name" name="company_name"
+                           type="text" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-name" placeholder="Location" v-if="new_user"
+                           v-model="registerForm.location" name="location"
+                           type="text" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-subject" placeholder="How did you hear about us?"
+                           v-if="new_user"
+                           v-model="registerForm.medium" name="medium"
+                           required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control form-control-subject" placeholder="Occupation" v-if="new_user"
+                           v-model="registerForm.occupation" name="occupation"
+                           required>
+                  </div>
+                </div>
+              </div>
+
+              <!--Pal-->
+
+              <div v-if="pal && new_user">
+                <h4 style="color: #f99a24">Pal's Details</h4>
+
+                <div id="pal" class="animated">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control form-control-subject" placeholder="First name"
+                             v-if="pal && new_user"
+                             v-model="palDetails.pal_first_name" name="first_name" type="text"
+                             required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control form-control-subject" placeholder="Last name"
+                             v-if="pal && new_user"
+                             v-model="palDetails.pal_last_name" name="last_name" type="text"
+                             required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control form-control-subject" placeholder="Phone number"
+                             v-if="pal && new_user"
+                             v-model="palDetails.pal_phone" name="phone" type="tel"
+                             required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control form-control-subject" placeholder="Email address"
+                             v-if="pal && new_user"
+                             v-model="palDetails.pal_email" name="email" type="email"
+                             required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control form-control-subject" placeholder="Company name"
+                             v-if="pal && new_user"
+                             v-model="palDetails.pal_company_name" name="text" type="text"
+                             required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control form-control-name" placeholder="Location" v-if="new_user"
+                             v-model="palDetails.pal_location" name="location"
+                             type="text" required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control form-control-subject" placeholder="How did you hear about us?"
+                             v-if="new_user"
+                             v-model="palDetails.pal_medium" name="medium"
+                             required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control form-control-subject" placeholder="Occupation" v-if="new_user"
+                             v-model="palDetails.pal_occupation" name="occupation"
+                             required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Pal-->
+
+
+              <!--<button @click="test($event)">Reset</button>-->
+              <div class="text-center"><br>
+                <!--<button class="btn btn-primary" @click="register()" type="button"><i class="fa fa-paper-plane-o"></i>
+                  Register
+                </button>-->
+                <button class="btn btn-primary" @click="register('early_bird')" type="button" :disabled="registering">
+                  <i class="fa fa-ge"></i>
+                  Submit
+                  <i class="fa fa-spinner fa-spin" v-if="registering"></i>
+                </button>
+                <!--<button class="btn btn-primary" type="button"><i class="fa fa-paper-plane-o"></i>
+                  Early Pal
+                </button>-->
+              </div>
+            </form>
+            <!-- Contact form end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer end -->
+
+<!-- Javascript Files
+         ================================================== -->
+<!-- initialize jQuery Library -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- Bootstrap jQuery -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- Counter -->
+<script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+<!-- Countdown -->
+<!--<script type="text/javascript" src="js/jquery.jCounter.js"></script>-->
+<!-- Waypoints -->
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<!-- Color box for Popup-->
+<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+<!-- Smoothscroll -->
+<script type="text/javascript" src="js/smoothscroll.js"></script>
+<!-- Google Map API Key-->
+<script type="text/javascript"
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM"></script>
+<!-- Google Map Plugin-->
+<script type="text/javascript" src="js/gmap3.js"></script>
+<!-- Template custom -->
+<script type="text/javascript" src="js/custom.js"></script>
+<!--Contact Form-->
+<script type="text/javascript" src="js/gen_validatorv31.js"></script>
+<!--Custom Logic-->
+<script type="text/javascript" src="js/custom2.js"></script>
+
+<script type="text/javascript" src="js/sweetalert.js"></script>
+
+<!--Paystack script-->
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<!--Rave script-->
+<script type="text/javascript" src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+
+
+<script type="text/javascript" id="mapper">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.77010652626!2d3.4426460140937944!3d6.423576826100646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf51427cd4857%3A0x61931b4bc90aba8e!2sLandmark+Centre!5e0!3m2!1sen!2sng!4v1560616465276!5m2!1sen!2sng"
+    width = "600"
+    height = "450"
+    frameborder = "0"
+    style = "border:0"
+    allowfullscreen></iframe>
+</script>
+<!-- Body inner end -->
+</body>
+
+</html>

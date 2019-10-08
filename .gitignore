@@ -1,0 +1,4 @@
+error_log
+server_files/error_log
+server_files/log.txt
+server_files/response_logs.txt

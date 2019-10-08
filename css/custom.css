@@ -1,0 +1,128 @@
+@media (min-width: 992px) {
+    .padding-top-lg {
+        padding-top: 18%;
+    }
+}
+
+.carousel-inner .item img {
+    max-height: 400px !important;
+    width: auto !important;
+    margin: 0 auto;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(145deg,rgba(255,7,99,0.95) 5%,rgba(104,89,222,0.95) 100%);
+    background: -webkit-linear-gradient(145deg,rgba(255,7,99,0.95) 5%,rgba(104,89,222,0.95) 100%);
+    background: -o-linear-gradient(145deg,rgba(255,7,99,0.95) 5%,rgba(104,89,222,0.95) 100%);
+    background: -ms-linear-gradient(145deg,rgba(255,7,99,0.95) 5%,rgba(104,89,222,0.95) 100%);
+    background: linear-gradient(145deg,rgba(255,7,99,0.95) 5%,rgba(104,89,222,0.95) 100%);
+    overflow-x: hidden;
+    /*transition: 0.5s;*/
+}
+
+.overlay .overlay-content {
+    position: relative;
+    /*top: 20%;*/
+    /*transform: translateY(-50%);*/
+    text-align: center;
+    padding: 5% 1px;
+    /*color: white !important;*/
+}
+.pointer {
+    cursor: pointer !important;
+}
+
+#carouselExampleSlidesOnly .carousel-caption {
+    /*color: black;*/
+    /*right: 58%;*/
+    text-align: center;
+    /*max-width: 500px;*/
+    /*left: auto;*/
+    /*top: auto;*/
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+}
+
+.item {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background: #333;
+    text-align: center;
+    height: 300px;
+}
+
+.carousel-inner .item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(90deg, rgba(249, 154, 36, 1) 5%, rgba(210, 132, 35, 0.65) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(249, 154, 36, 1) 5%, rgba(210, 132, 35, 0.65) 100%);
+    background: -o-linear-gradient(90deg, rgba(249, 154, 36, 1) 5%, rgba(210, 132, 35, 0.65) 100%);
+    background: -ms-linear-gradient(90deg, rgba(249, 154, 36, 1) 5%, rgba(210, 132, 35, 0.65) 100%);
+    background: linear-gradient(120deg, rgba(249, 154, 36, 1) 1%, rgba(210, 132, 35, 0.65) 100%);
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+    background-color: inherit;
+}
+
+#register-form ::placeholder {
+    font-weight: lighter !important;
+    opacity: 0.65;
+    /*color: red !important;*/
+}
+
+.choice-buttons {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 13px 18px;
+    line-height: 1.33;
+    border-radius: 3px;
+}
+
+.choice-buttons:focus {
+    outline: none;
+}
+
+.btn-active {
+    /*border: 2px solid #f99a24;*/
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.btn-padding {
+    padding: 4px;
+    background-color: #f99a24;
+}
+
+.btn-inactive:hover {
+    background-color: #f99a24;
+    color: #fff;
+}
+
+.btn-inactive {
+    border: 2px solid #f99a24;
+    background-color: #f99a24;
+}
+
+.btn-outline-primary {
+    border: 2px solid #f99a24;
+    background-color: #fff;
+    box-shadow: inset -1px -2px 2px #aaa;
+}

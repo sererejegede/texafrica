@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs ================================================== -->
+  <meta charset="utf-8">
+
+  <!-- Mobile Specific Metas ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+  <!-- Site Title -->
+  <title>TexAfrica 2020- Be More Do More</title>
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS
+     ================================================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Template styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Responsive fvstyles-->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Animation -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="css/colorbox.css">
+  <!-- Custom -->
+  <link rel="stylesheet" href="css/custom.css">
+
+
+  <!--Vuejs-->
+  <script src="js/vue.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="app">
+  <div class="body-inner">
+
+    <header id="header" class="header header-transparent">
+      <div class="container">
+        <div class="row">
+          <div class="navbar-header">
+            <div class="logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="">
+              </a>
+            </div>
+            <!-- logo end -->
+          </div>
+          <!-- Navbar header end -->
+          <div class="site-nav-inner">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <!-- Blog li end -->
+                <li><a href="gallery.html">Texa 2019</a></li>
+                <li class="header-ticket">
+                  <a class="ticket-btn btn-primary pointer" @click="redirect()"><i
+                          class="fa fa-ticket"></i>REGISTER</a>
+                </li>
+              </ul>
+              <!--/ Nav ul end -->
+            </nav>
+            <!--/ Collapse end -->
+          </div>
+          <!--/ Site nav inner end -->
+        </div>
+        <!--/ Row end -->
+      </div>
+      <!--/ Container end -->
+    </header>
+    <div id="page-banner-area" class="page-banner-area" style="background-image:url(images/banner/banner5.jpg)">
+      <!-- Subpage title start -->
+      <div class="page-banner-title">
+        <div class="text-center">
+          <h2></h2>
+        </div>
+      </div><!-- Subpage title end -->
+    </div><!-- Page Banner end -->
+
+    <section id="main-container" class="main-container">
+      <div class="container">
+        <div class="row text-center">
+          <h2 class="section-title">From 2019</h2>
+          <h3 class="section-sub-title">Photo Gallery</h3>
+        </div><!--/ Title row end -->
+
+        <div class="row">
+          <div id="gallery">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery1.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery1.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 1 end -->
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery2.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery2.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 2 end -->
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery3.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery3.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 3 end -->
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery4.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery4.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 4 end -->
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery5.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery5.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 5 end -->
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery6.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery6.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 6 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery7.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery7.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 7 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery8.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery8.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 8 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery9.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery9.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 9 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery10.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery10.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 10 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery11.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery11.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 11 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery12.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery12.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 12 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery13.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery13.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 13 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery14.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery14.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 14 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery15.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery15.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 15 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery16.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery16.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 16 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery17.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery17.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 17 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery18.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery18.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 18 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery19.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery19.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 19 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery20.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery20.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 20 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery21.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery21.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 21 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery22.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery22.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 22 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery23.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery23.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 23 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery24.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery24.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 24 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery25.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery25.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 25 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery26.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery26.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 26 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery27.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery27.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 27 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery30.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery30.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 30 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery31.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery31.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 31 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery32.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery32.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 32 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery33.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery33.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 33 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery34.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery34.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 34 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery35.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery35.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 35 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery36.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery36.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 36 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery37.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery37.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 37 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery38.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery38.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 38 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery39.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery39.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 39 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery40.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery40.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 40 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery41.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery41.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 41 end -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery42.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery42.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 42 end -->
+             <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery43.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery43.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 43 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery44.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery44.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 44 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery45.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery45.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 45 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery46.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery46.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 46 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery47.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery47.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 47 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery48.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery48.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 48 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery49.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery49.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 49 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery50.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery50.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 50 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery51.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery51.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 51 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery52.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery52.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 52 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery53.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery53.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 53 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery54.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery54.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 54 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery55.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery55.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 55 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery56.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery56.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 56 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery57.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery57.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+                </div><!-- Gallery item 57 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery58.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery58.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 58 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery59.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery59.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 59 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery60.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery60.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 60 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery61.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery61.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 61 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery62.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery62.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 62 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery63.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery63.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 63 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery64.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery64.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 64 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery65.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery65.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 65 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery66.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery66.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 66 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery67.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery67.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 67 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery68.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery68.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 68 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery69.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery69.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 69 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery70.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery70.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 70 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery71.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery71.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 71 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery72.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery72.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 72 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery73.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery73.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 73 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery74.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery74.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 74 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery75.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery75.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 75 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery76.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery76.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 76 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery77.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery77.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 77 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery78.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery78.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 78 end -->
+ <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="gallery-container">
+                <a class="gallery-popup" href="images/gallery/gallery79.jpg">
+                  <img class="img-responsive" src="images/gallery/gallery79.jpg" alt="">
+                  <span class="gallery-icon"><i class="fa fa-search"></i></span>
+                </a>
+              </div>
+            </div><!-- Gallery item 79 end -->
+          </div><!-- Gallery end -->
+
+        </div><!-- Content row end -->
+      </div><!-- Conatiner end -->
+    </section><!-- Main container end -->
+
+    <footer id="footer" class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="footer-menu">
+              <ul class="nav unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">TEXA 2019</a></li>
+              </ul>
+            </div><!-- Footer menu end -->
+
+            <div class="footer-logo">
+              <img src="images/footer-logo.png" alt="footer logo"/>
+            </div>
+
+
+            <div class="footer-social">
+              <ul>
+                <li><a href="https://www.instagram.com/theeventexperienceafrica/"><i class="fa fa-instagram"></i></a>
+                </li>
+              </ul>
+            </div><!-- Footer social end -->
+
+
+            <div class="copyright-info">
+              <span>Copyright © 2019 TEXA. All Rights Reserved.</span>
+            </div><!-- Copyright info end -->
+
+          </div><!-- Content col end -->
+        </div><!-- Content row end -->
+      </div><!-- Container end -->
+      <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+        <button class="btn btn-primary" title="Back to Top">
+          <i class="fa fa-angle-up"></i>
+        </button>
+      </div>
+
+    </footer><!-- Footer end -->
+
+
+    <!-- Javascript Files
+    ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- Bootstrap jQuery -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Counter -->
+    <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+    <!-- Waypoints -->
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <!-- Color box -->
+    <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+    <!-- Smoothscroll -->
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <!-- Template custom -->
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <!--Custom Logic-->
+    <script type="text/javascript" src="js/custom2.js"></script>
+
+
+  </div><!-- Body inner end -->
+</div>
+</body>
+</html>
